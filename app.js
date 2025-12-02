@@ -2,9 +2,9 @@ const Koa = require("koa");
 const app = new Koa();
 const json = require("koa-json"); //将http响应格式化为json
 const bodyParser = require("koa-bodyparser"); //解析http请求体
-const Router = require("@koa/router");
+
 const cors = require("@koa/cors");
-const router = new Router();
+const router = require("./router");
 
 router.get('/apia', async (ctx) => {
   ctx.body = { 
